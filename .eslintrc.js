@@ -78,6 +78,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   parserOptions: {
     ecmaVersion: "latest",
@@ -142,5 +143,14 @@ module.exports = {
     "object-curly-spacing": [2, "always"],
     "eslint object-curly-spacing": ["error", "never"],
     "i18next/no-literal-string": ["error", { markupOnly: true }],
+    "react/display-name": "off",
+    "@typescript-eslint/no-unsafe-return": 0,
+    "@typescript-eslint/no-unsafe-argument": 0,
+
+    "@typescript-eslint/restrict-template-expressions": [
+      2,
+      { allowNumber: true, allowBoolean: true },
+    ],
+    "@typescript-eslint/restrict-plus-operands": 2,
   },
 };
