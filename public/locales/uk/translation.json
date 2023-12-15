@@ -1,4 +1,9 @@
 {
-	"Test translate" : "Тестовий переклад",
-	"English" : "Українська"
+  "Test translate": "Тестовий переклад",
+  "English": "Українська",
+  "toggle": "Перемикач",
+  "Page not found": "Сторінку не знайдено",
+  "An unexpected error occured": "Сталася неочікувана помилка",
+  "Refresh the page": "Оновіть сторінку",
+  "throw error": "помилка викиду"
 }

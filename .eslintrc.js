@@ -74,83 +74,52 @@
 //   },
 // };
 
+//
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    jest: true,
-  },
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-  },
-  extends: [
-    "react-app",
-    "standard-with-typescript",
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:i18next/recommended",
-  ],
-  overrides: [
-    {
-      env: {
-        node: 1,
-      },
-      files: ["*.js", "*.jsx", "*.ts", "*.tsx"],
-      extends: "standard-with-typescript",
-      parserOptions: {
-        sourceType: "script",
-      },
-      rules: {
-        "@typescript-eslint/restrict-plus-operands": [
-          "error",
-          { checkCompoundAssignments: true },
-        ],
-      },
+    env: {
+        browser: true,
+        es2021: true,
+        jest: true,
     },
-  ],
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-  },
-  plugins: ["react", "@typescript-eslint", "i18next"],
-  rules: {
-    "react/jsx-indent": [2, 4],
-    indent: "off",
-    "react/jsx-filename-extension": [
-      2,
-      { extensions: [".js", ".jsx", ".tsx"] },
+    extends: [
+        'plugin:react/recommended',
+        'airbnb',
+        'react-app',
+        'plugin:i18next/recommended',
     ],
-    "react/function-component-definition": [
-      2,
-      {
-        namedComponents: "function-declaration",
-      },
-    ],
-    "@typescript-eslint/restrict-plus-operands": "off",
-    "prettier/prettier": ["error", { singleQuote: true }],
-    "import/no-extraneous-dependencies": "off",
-    "import/no-unresolved": "off",
-    "import/prefer-default-export": "off",
-    "no-unused-vars": "warn",
-    "react/require-default-props": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-props-no-spreading": "warn",
-    "react/function-component-definition": "off",
-    "no-shadow": "off",
-    "import/extensions": "off",
-    "no-underscore-dangle": "off",
-    "object-curly-spacing": [2, "always"],
-    "eslint object-curly-spacing": ["error", "never"],
-    "i18next/no-literal-string": ["error", { markupOnly: true }],
-    "react/display-name": "off",
-    "@typescript-eslint/no-unsafe-return": 0,
-    "@typescript-eslint/no-unsafe-argument": 0,
-
-    "@typescript-eslint/restrict-template-expressions": [
-      2,
-      { allowNumber: true, allowBoolean: true },
-    ],
-    "@typescript-eslint/restrict-plus-operands": 2,
-  },
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        ecmaFeatures: {
+            jsx: true,
+        },
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+    },
+    plugins: ['react', 'i18next'],
+    rules: {
+        'react/jsx-indent': [2, 4],
+        'react/jsx-indent-props': [2, 4],
+        indent: [2, 4],
+        'react/jsx-filename-extension': [
+            2,
+            { extensions: ['.js', '.jsx', '.tsx'] },
+        ],
+        'import/no-unresolved': 'off',
+        'import/prefer-default-export': 'off',
+        'no-unused-vars': 'warn',
+        'react/require-default-props': 'off',
+        'react/react-in-jsx-scope': 'off',
+        'react/jsx-props-no-spreading': 'warn',
+        'react/function-component-definition': 'off',
+        'no-shadow': 'off',
+        'import/extensions': 'off',
+        'import/no-extraneous-dependencies': 'off',
+        'no-underscore-dangle': 'off',
+        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'max-len': ['error', { ignoreComments: true }],
+        'no-tabs': ['error', { allowIndentationTabs: true }],
+    },
+    globals: {
+        __IS_DEV__: true,
+    },
 };

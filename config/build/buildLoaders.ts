@@ -4,8 +4,8 @@ import { BuildOptions } from './types/config';
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     const svgLoader = {
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
     };
 
     const babelLoader = {
@@ -36,6 +36,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
                 loader: 'css-loader',
                 options: {
                     modules: {
+                        // eslint-disable-next-line max-len
                         auto: (resPath: string) => Boolean(resPath.includes('.module.')),
                         localIdentName: isDev
                             ? '[path][name]__[local]--[hash:base64:5]'

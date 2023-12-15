@@ -1,4 +1,9 @@
 {
 	"Test translation" : "Test translation",
-	"English" : "English"
+	"English" : "English",
+	"toggle" : "toggle",
+	"Page not found" : "Page not found",
+	"An unexpected error occured" : "An unexpected error occured",
+	"Refresh the page" : "Refresh the page",
+	"throw error" : "throw error"
 }
