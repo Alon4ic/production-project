@@ -13,7 +13,7 @@
     "allowJs": true,
     "moduleResolution": "node",
     // Для абсолютного импорта
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "*": ["./src/*"]
     },
@@ -41,6 +41,7 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "src/**/*.scss" // включаем файлы стилей
+    "src/**/*.scss", // включаем файлы стилей
+    "./config/jest/setupTests.ts"
   ]
 }

@@ -117,7 +117,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
         'max-len': ['error', { ignoreComments: true }],
-        'no-tabs': ['error', { allowIndentationTabs: true }],
+        'no-tabs': ['error', { allowIndentationTabs: true, code: 100 }],
     },
     globals: {
         __IS_DEV__: true,
